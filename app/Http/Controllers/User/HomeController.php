@@ -15,10 +15,17 @@ class HomeController extends Controller
         $menus = Menu::all();
         return view('user.home',compact('menus'));
     }
-    public function show_details($id){
+    // public function show_details($id){
 
-        $menu =  Menu::findOrFail($id);
+    //     $menu =  Menu::findOrFail($id);
 
-        return view('user.show_details',compact('menu'));
+    //     return view('user.show_details',compact('menu'));
+    // }
+
+    public function show_details(){
+
+
+        return view('user.show_details');
     }
 }
+

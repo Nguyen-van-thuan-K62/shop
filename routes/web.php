@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function(){
 
  //USER 
  Route::get('/index',[HomeController::class,'index'])->name('index');
- Route::get('/show_details/{id}',[HomeController::class,'show_details']);
+ Route::get('/show_details',[HomeController::class,'show_details']);
 
  Route::get('/user/signup',[SignupController::class,'index']);
  Route::post('/user/signup',[SignupController::class,'signup']);
