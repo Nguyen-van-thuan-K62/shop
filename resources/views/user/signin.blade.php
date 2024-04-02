@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Ký</title>
+    <title>Đăng Nhập</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -12,7 +12,7 @@
 <div class="border rounded-3 m-auto mt-5 bg-secondary" style = "height:450px ; width:400px;">
     <div class="m-auto" style = "height:380px ; width:330px;">
         <h3 class="text-center text-white my-4">Đăng Nhập</h3>
-        <form action="/user/signup" method = "post">
+        <form action="/user/signin" method = "post">
             @csrf
         <div class="mb-3">
             <label class="form-label">Email</label>

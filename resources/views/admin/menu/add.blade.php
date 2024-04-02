@@ -12,8 +12,8 @@
 
         
         <div class="form-group">
-            <label>Ảnh sản phẩm </label>
-            <input type="text"  name = "image" class="form-control">
+            <label for="myfile">Ảnh sản phẩm:</label>
+            <input type="file" id="myfile"  name = "image" required multiple><br><br>
         </div>
 
         <div class="form-group">

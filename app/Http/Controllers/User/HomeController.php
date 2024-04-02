@@ -21,7 +21,13 @@ class HomeController extends Controller
 
     //     return view('user.show_details',compact('menu'));
     // }
+    public function user_signin(){
 
+        $menus = Menu::all();
+        return view('user.user_signin',[
+            'title' =>"Trang chu"
+        ],compact('menus'));
+    }
     public function show_details(){
 
 

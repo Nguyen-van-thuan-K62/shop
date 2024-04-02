@@ -21,7 +21,9 @@ Route::middleware(['auth'])->group(function(){
     Route::prefix('/admin')->group(function(){
 
         Route::get('/',[MainController::class,'index'])->name('admin');
+        Route::get('/delete/{id}',[MainController::class,'delete']);
         Route::get('/main',[MainController::class,'index']);
+
     
         Route::prefix('/menu')->group(function(){
 
@@ -41,12 +43,13 @@ Route::middleware(['auth'])->group(function(){
 
  //USER 
  Route::get('/index',[HomeController::class,'index'])->name('index');
+ Route::get('user_signin',[HomeController::class,'user_signin'])->name('user_signin');
  Route::get('/show_details',[HomeController::class,'show_details']);
 
  Route::get('/user/signup',[SignupController::class,'index']);
  Route::post('/user/signup',[SignupController::class,'signup']);
 
- Route::get('/user/signin',[SigninController::class,'index']);
+ Route::get('/user/signin',[SigninController::class,'index'])->name('signin');
  Route::post('/user/signin',[SigninController::class,'signin']);
 
  //cart

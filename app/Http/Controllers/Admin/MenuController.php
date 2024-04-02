@@ -25,7 +25,14 @@ class MenuController extends Controller
         ]);
         //return $menus;
     }
-    
+    // public function upfile(Request $request)
+    // {
+    //     $file= $request->file('image');
+    //     $filename= date('YmdHi').$file->hashName();
+    //     $file-> move(public_path('public/Image'), $filename);
+    //     $data['image']= $filename;
+    //     $data->save();
+    // }
     public function store(Request $request){
         $this->validate($request,[
             'image'=>"required",
@@ -37,7 +44,8 @@ class MenuController extends Controller
 
         try{
             Menu::create([ 
-                'image' =>(int)$request->input('image'),
+                // 'image'=>(String)$request->input('image'),
+                'image'=>$request->file('image')->store('public/Image'),
                 'name' =>(String)$request->input('name'),
                 'description'=>(String)$request->input('description'),
                 'price'=>(String)$request->input('price'),
